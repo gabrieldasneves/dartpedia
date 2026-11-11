@@ -2,7 +2,7 @@ import 'dart:io';
 
 void printUsage() {
   print(
-    "The following commands are valid: help, version, calculate, search <ARTICLE-TITLE>",
+    "The following commands are valid: 'help', 'version', 'search <ARTICLE-TITLE>'",
   );
 }
 
@@ -16,11 +16,15 @@ String version() {
 
 void searchWikipedia(List<String>? arguments) {
   final String articleTitle;
+
   if (arguments == null || arguments.isEmpty) {
     print('Please provide an article title.');
     articleTitle = stdin.readLineSync() ?? '';
   } else {
     articleTitle = arguments.join(' ');
   }
-  print('Current article title: $articleTitle');
+
+  print('Looking up articles about "$articleTitle". Please wait.');
+  print('Here ya go!');
+  print('(Pretend this is an article about "$articleTitle")');
 }
