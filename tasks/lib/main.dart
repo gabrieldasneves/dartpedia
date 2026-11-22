@@ -18,20 +18,31 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(title: Text('Login page')),
         body: Center(
           child: Column(
+            mainAxisSize: MainAxisSize.min,
             children: [
-              SizedBox(
-                height: 20,
-                width: 300,
-                child: TextField(
-                  decoration: InputDecoration(labelText: 'Email'),
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: SizedBox(
+                  height: 20,
+                  width: 300,
+                  child: TextField(
+                    decoration: InputDecoration(labelText: 'Email'),
+                  ),
                 ),
               ),
-              SizedBox(
-                height: 20,
-                width: 300,
-                child: TextField(
-                  decoration: InputDecoration(labelText: 'Password'),
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: SizedBox(
+                  height: 20,
+                  width: 300,
+                  child: TextField(
+                    decoration: InputDecoration(labelText: 'Password'),
+                  ),
                 ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: ElevatedButton(onPressed: () {}, child: Text('Login')),
               ),
             ],
           ),
