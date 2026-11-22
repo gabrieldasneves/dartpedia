@@ -14,7 +14,29 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
       ),
-      home: Scaffold(body: Center(child: Text('Hello World'))),
+      home: Scaffold(
+        appBar: AppBar(title: Text('Login page')),
+        body: Center(
+          child: Column(
+            children: [
+              SizedBox(
+                height: 20,
+                width: 300,
+                child: TextField(
+                  decoration: InputDecoration(labelText: 'Email'),
+                ),
+              ),
+              SizedBox(
+                height: 20,
+                width: 300,
+                child: TextField(
+                  decoration: InputDecoration(labelText: 'Password'),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
